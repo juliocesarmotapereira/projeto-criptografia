@@ -1,58 +1,59 @@
-* main {
-  display: flex;
-}
-/*
-{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* {
+  font-family: 'Mukta', sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 150%;
 }
 
 body {
-  background-color: lightgray;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #E5E5E5;
 }
 
-.main {
-  width: 80vw;
-  margin: auto;
+header {
+  margin-left: 40px;
+}
+
+main {
   display: flex;
-  justify-content: center;
+  margin-left: 80px;
+  margin-bottom: 50px;
 }
 
-.titulo {
-  padding: 15px;
-  width: 30vw;
-  margin: auto;
-
+.input-texto {
+  margin-top: 90px;
 }
 
-.box {
-  padding: 10px;
-  margin: 0 10px 0 10px;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  background-color: white;
-  border-radius: 0.5em;
-  width: 30vw;
-  height: auto;
+.informacao {
+  font-size: 15px;
+} 
+
+.botoes {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
 }
 
-.btn {
-  border: 0;
-  color: white;
-  font-weight: bold;
-  background-color: blue;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 0.5em;
+.encriptar {
+  background-color: #0A3871; 
+  color: #fff;
 }
 
-.text-input {
-  border-radius: 0.5em;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  display: block;
-  padding: 0.5em;
-  width: 100%;
-  height: 50px;
+.desencriptar {
+  margin-left: 30px;
 }
-*/ 
+
+.mensagem {
+  position: fixed;
+  margin-top: 20px;
+  margin-left: 90px;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-position: 18px;
+  background-size: 300px;
+}
+
+.copiar {
+  position: relative;
+  margin-top: 330px;
+  margin-left: 205px;
+}
