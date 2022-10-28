@@ -12,3 +12,6 @@ O objetivo da aplicação e criptografar os textos, assim você poderá trocar m
 
 ## Linguagem e ferramentas utilizadas
 HTML, CSS, JavaScript, GitHub Trello, Figma.
+
+## Acessar deploy 
+https://projeto-criptografia.netlify.app/
