@@ -11,6 +11,7 @@ body {
 
 header {
   margin-left: 40px;
+  margin-top: 40px;
 }
 
 main {
@@ -46,7 +47,7 @@ main {
   position: fixed;
   margin-top: 20px;
   margin-left: 90px;
-  background-image: url("");
+  background-image: url("/imagens_criptografia/boneco_alura.png");
   background-repeat: no-repeat;
   background-position: 18px;
   background-size: 300px;

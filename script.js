@@ -1,11 +1,15 @@
 const inputTexto = document.querySelector(".input-texto");
-const mensagem = document.querySelector(".mensagem");
+const mensagem = document.querySelector(".mensagem"); 
+document.getElementById("div-aparece").style.display = "none";
+
+//Encriptar 
 
 function btnEncriptar() {
     const textoEncriptado = encriptar(inputTexto.value);
     mensagem.value = textoEncriptado;
+    mensagem.style.backgroundImage = "none";
+    aparece();
 }
-
 
 function encriptar(stringEncriptada) {
     let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o","ober"], ["u","ufat"]];
@@ -13,33 +17,42 @@ function encriptar(stringEncriptada) {
 
     for(let i=0; i < matrizCodigo.length; i++) {
         if(stringEncriptada.includes(matrizCodigo[i][0])) {
-            stringEncriptada = stringEncriptada.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1])
-        }
-    }
-
-    return stringEncriptada;
-}
-
-/*
-function encriptar(stringEncriptada) {
-    let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "obter"], ["u", "ufat"]];
-    stringEncriptada = stringEncriptada.toLowerCase();
-
-    for (let i0= 0; i < matrizCodigo.length; i++) {
-        if(stringEncriptada.includes(matrizCodigo[i][0])) {
-            stringEncriptada.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1])
+            stringEncriptada = stringEncriptada.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
         }
     }
     return stringEncriptada;
 }
 
+//Desencriptar 
 
-/* Regras Decodificador: 
-"enter" é convertido para "e" 
-"imes" é convertido para "i"
-"ai" é convertido para "a"
-"ober" é convertido para "o"
-"ufat" é convertido para "u"
-Apenas letras minúsculas
-Não permite acentuação     
-*/
+function btnDescriptar() {
+    const textoDesencriptado = desencriptar(inputTexto.value);
+    mensagem.value = textoDesencriptado;
+    mensagem.style.backgroundImage = "none";
+    aparece();
+}
+
+function desencriptar(stringDesencriptada) {
+    let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o","ober"], ["u","ufat"]];
+    stringDesencriptada = stringDesencriptada.toLowerCase();
+
+    for(let i=0; i < matrizCodigo.length; i++) {
+        if(stringDesencriptada.includes(matrizCodigo[i][1])) {
+            stringDesencriptada = stringDesencriptada.replaceAll(matrizCodigo[i][1], matrizCodigo[i][0]);
+        }
+    }
+    return stringDesencriptada;
+}
+
+//Copiar
+
+function copiar() {
+    const msg = document.querySelector(".mensagem");
+    msg.select();
+    navigator.clipboard.writeText(msg.value)
+    msg.value = "";
+}
+
+function aparece() {
+    document.getElementById("div-aparece").style.display = "block";
+}
